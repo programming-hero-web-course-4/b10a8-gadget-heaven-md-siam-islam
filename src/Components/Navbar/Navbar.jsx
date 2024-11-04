@@ -22,20 +22,20 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-               <NavLink><li><a className="font-semibold">Home</a></li></NavLink>
-            <NavLink><li><a className="font-semibold">Statistics</a></li></NavLink>
-            <NavLink to="/dashboard"><li><a className="font-semibold">Dashboard</a></li></NavLink>
-            <NavLink><li><a className="font-semibold">siam</a></li></NavLink>
+               <NavLink to="/"className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`}><li><a className="font-semibold">Home</a></li></NavLink>
+            <NavLink to='/Statistics' className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl '}`} ><li><a className="font-semibold">Statistics</a></li></NavLink>
+            <NavLink to="/dashboard" className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`} ><li><a className="font-semibold">Dashboard</a></li></NavLink>
+            <NavLink to="/History"  className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`}><li><a className="font-semibold">History</a></li></NavLink>
             </ul>
           </div>
           <a className="btn btn-ghost md:text-2xl text-xl font-bold">Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <NavLink><li><a className="font-semibold">Home</a></li></NavLink>
-            <NavLink to='/Statistics'><li><a className="font-semibold">Statistics</a></li></NavLink>
-            <NavLink to="/dashboard"><li><a className="font-semibold">Dashboard</a></li></NavLink>
-            <NavLink to="/History"><li><a className="font-semibold">History</a></li></NavLink>
+            <NavLink to="/"className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`}><li><a className="font-semibold">Home</a></li></NavLink>
+            <NavLink to='/Statistics' className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl '}`} ><li><a className="font-semibold">Statistics</a></li></NavLink>
+            <NavLink to="/dashboard" className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`} ><li><a className="font-semibold">Dashboard</a></li></NavLink>
+            <NavLink to="/History"  className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`}><li><a className="font-semibold">History</a></li></NavLink>
             
             
           </ul>

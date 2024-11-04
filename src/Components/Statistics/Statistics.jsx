@@ -3,7 +3,10 @@ import React from 'react';
 const Statistics = () => {
     return (
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod expedita vitae sint nihil praesentium odit sunt nobis tempore cumque ad?</p>
+            <div className='bg-[#9538E2] px-5 py-4 rounded-3xl'>
+
+                <h1 className='text-2xl md:text-4xl font-extrabold text-white'>Product Details</h1>
+            </div>
         </div>
     );
 };
