@@ -1,9 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { NavLink,useLocation } from "react-router-dom";
 
 const Navbar = () => {
+
+  const location = useLocation();
+
+  const navbar = () =>{
+    switch(location.pathname){
+      default:
+        return{backgroundColor : 'blueviolet'};
+        case '/Statistics':
+          return{backgroundColor : 'white' , color: 'black'};
+        case '/dashboard':
+          return{backgroundColor : 'white' , color: 'black'};
+        case '/History':
+          return{backgroundColor : 'white' , color: 'black'};
+
+    }
+  }
     return (
-        <div className="navbar bg-base-100">
-        <div className="navbar-start">
+        <div className=" bg-[#9538E2] rounded-t-2xl " style={navbar()}>
+       <div className="navbar px-10">
+       <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -44,6 +61,7 @@ const Navbar = () => {
           <button className="border rounded-full p-1 flex"><img src="https://img.icons8.com/?size=25&id=TmwMMf8vZgfS&format=png" alt="" /></button>
          <button className="border rounded-full p-1"> <img src="https://img.icons8.com/?size=24&id=86721&format=png" alt="" /></button>
         </div>
+       </div>
       </div>
     );
 };
