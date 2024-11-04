@@ -4,19 +4,23 @@ const Navbar = () => {
 
   const location = useLocation();
 
-  const navbar = () =>{
-    switch(location.pathname){
-      default:
-        return{backgroundColor : 'blueviolet'};
-        case '/Statistics':
-          return{backgroundColor : 'white' , color: 'black'};
-        case '/dashboard':
-          return{backgroundColor : 'white' , color: 'black'};
-        case '/History':
-          return{backgroundColor : 'white' , color: 'black'};
+ 
 
+
+  const navbar = () => {
+    if (location.pathname.startsWith('/Statistics')) {
+      return { backgroundColor: 'white', color: 'black' };
     }
-  }
+  
+    switch (location.pathname) {
+      case '/dashboard':
+      case '/History':
+        return { backgroundColor: 'white', color: 'black' };
+      default:
+        return { backgroundColor: 'blueviolet', color: 'white' };
+    }
+  };
+  
     return (
         <div className=" bg-[#9538E2] rounded-t-2xl " style={navbar()}>
        <div className="navbar px-10">
