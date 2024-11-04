@@ -8,6 +8,7 @@ import {
 import Main from './Components/MainFile/Main';
 import Home from './Components/Home/Home';
 import Card2 from './Components/Cardsection/Card2';
+import ErrorPage from './Components/Error/Error';
 
 
 
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
         element:<Home></Home>,
         loader: () => fetch('../public/categories.json'),
 
+        errorElement:<ErrorPage></ErrorPage>,
+
         children:[
         
          {
@@ -36,6 +39,12 @@ const router = createBrowserRouter([
 
           element:<Card2></Card2>,
           loader: () => fetch('/Data.json')
+         },
+         {
+          path : "/card",
+
+          element:<Card2></Card2>,
+          loader: () => fetch('/Data.json'),
          },
         ],
       }

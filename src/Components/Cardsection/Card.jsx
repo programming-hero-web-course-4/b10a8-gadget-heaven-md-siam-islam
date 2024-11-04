@@ -1,12 +1,25 @@
 
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Card = ({ data }) => {
+
+    const location = useLocation()
     return (
         <div className="my-24">
             <div className="flex flex-col border rounded-2xl px-3 pu-2">
-                <button className="border rounded-2xl px-4 py-2 my-2 w-44">All Product</button>
+                <NavLink to="/card">
+
+                <NavLink to="/card">
+                    
+                        <button 
+                            className={`border rounded-2xl px-4 py-2 my-2 w-44 ${location.pathname === "/card"  ? 'bg-[#9538E2] text-white font-semibold' : ''}`}
+                        >
+                            All Product
+                        </button>
+                    
+                </NavLink>
+                </NavLink>
                 {
                     data.map((e, index) => (
                         <NavLink 
