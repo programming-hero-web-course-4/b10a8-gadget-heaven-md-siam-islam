@@ -9,6 +9,9 @@ import Main from './Components/MainFile/Main';
 import Home from './Components/Home/Home';
 import Card2 from './Components/Cardsection/Card2';
 import ErrorPage from './Components/Error/Error';
+import Dashboard from './Components/Dashboard/Dashboard';
+import Statistics from './Components/Statistics/Statistics';
+import History from './Components/History/History';
 
 
 
@@ -47,6 +50,18 @@ const router = createBrowserRouter([
           loader: () => fetch('/Data.json'),
          },
         ],
+      },
+      {
+        path:"/dashboard",
+        element:<Dashboard></Dashboard>
+      },
+      {
+        path:"/Statistics",
+        element:<Statistics></Statistics>,
+      },
+      {
+        path:"/History",
+        element:<History></History>,
       }
     ]
   },

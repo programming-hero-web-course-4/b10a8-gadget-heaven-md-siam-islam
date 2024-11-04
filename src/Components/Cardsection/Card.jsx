@@ -13,7 +13,7 @@ const Card = ({ data }) => {
                 <NavLink to="/card">
                     
                         <button 
-                            className={`border rounded-2xl px-4 py-2 my-2 w-44 ${location.pathname === "/card"  ? 'bg-[#9538E2] text-white font-semibold' : ''}`}
+                            className={`border rounded-2xl px-4 py-2 my-2 w-44 ${location.pathname === "/card"  ? 'bg-[#9538E2] text-white font-semibold' : 'hover:bg-[#9538E2] hover:text-white font-semibold'}`}
                         >
                             All Product
                         </button>
@@ -28,7 +28,7 @@ const Card = ({ data }) => {
                         >
                             {({ isActive }) => (
                                 <button
-                                    className={`border rounded-2xl px-4 py-2 my-2 w-44 ${isActive ? 'bg-[#9538E2] text-white font-semibold' : ''}`}
+                                    className={`border rounded-2xl px-4 py-2 my-2 w-44 ${isActive ? 'bg-[#9538E2] text-white font-semibold' : 'hover:bg-[#9538E2] hover:text-white font-semibold'}`}
                                 >
                                     {e.category}
                                 </button>

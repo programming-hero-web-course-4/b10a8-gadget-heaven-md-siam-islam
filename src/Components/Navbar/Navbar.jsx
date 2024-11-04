@@ -24,7 +24,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                <NavLink><li><a className="font-semibold">Home</a></li></NavLink>
             <NavLink><li><a className="font-semibold">Statistics</a></li></NavLink>
-            <NavLink><li><a className="font-semibold">Dashboard</a></li></NavLink>
+            <NavLink to="/dashboard"><li><a className="font-semibold">Dashboard</a></li></NavLink>
             <NavLink><li><a className="font-semibold">siam</a></li></NavLink>
             </ul>
           </div>
@@ -33,9 +33,9 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <NavLink><li><a className="font-semibold">Home</a></li></NavLink>
-            <NavLink><li><a className="font-semibold">Statistics</a></li></NavLink>
-            <NavLink><li><a className="font-semibold">Dashboard</a></li></NavLink>
-            <NavLink><li><a className="font-semibold">siam</a></li></NavLink>
+            <NavLink to='/Statistics'><li><a className="font-semibold">Statistics</a></li></NavLink>
+            <NavLink to="/dashboard"><li><a className="font-semibold">Dashboard</a></li></NavLink>
+            <NavLink to="/History"><li><a className="font-semibold">History</a></li></NavLink>
             
             
           </ul>
