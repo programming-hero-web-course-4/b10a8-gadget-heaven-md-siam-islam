@@ -6,12 +6,21 @@ import { getStore } from "../Jsfile/Local";
 const Addcart = () => {
     const data = useLoaderData();
     const [store, setStore] = useState([]);
+    const [isSorted, setIsSorted] = useState(false);
 
     useEffect(() => {
         const storeData = getStore();
         const addCart = storeData.map(productId => data.find(item => item.product_id === productId));
         setStore(addCart);
     }, [data]);
+
+    const totalCost = store.reduce((acc, item) => acc + (item?.price || 0), 0);
+
+    const handleSortByPrice = () => {
+        const sortedStore = [...store].sort((a, b) => (b.price || 0) - (a.price || 0)); 
+        setStore(isSorted ? store : sortedStore); 
+        setIsSorted(!isSorted);
+    };
 
     return (
         <div>
@@ -21,9 +30,9 @@ const Addcart = () => {
             </div>
 
             <div className="flex gap-5 items-center">
-                <h1 className="text-base font-bold">Total Cost : $</h1>
+                <h1 className="text-base font-bold">Total Cost : $ {totalCost}</h1>
 
-                <button className="border border-[#9538E2] font-semibold px-5 rounded-2xl py-2">
+                <button onClick={handleSortByPrice} className="border border-[#9538E2] font-semibold px-5 rounded-2xl py-2">
                     Sort by Price
                 </button>
 

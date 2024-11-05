@@ -33,4 +33,4 @@ const addwish = (id) => {
 };
 
 
-export { addStore, addwish, getStore };
+export { addStore, addwish, getStore, getwish};

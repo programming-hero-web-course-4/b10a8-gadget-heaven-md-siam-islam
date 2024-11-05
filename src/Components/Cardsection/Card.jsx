@@ -21,7 +21,7 @@ const Card = ({ data }) => {
                 </NavLink>
                 </NavLink>
                 {
-                    data.map((e, index) => (
+                    data?.map((e, index) => (
                         <NavLink 
                             key={index}
                             to={`/card/${e.category}`}
