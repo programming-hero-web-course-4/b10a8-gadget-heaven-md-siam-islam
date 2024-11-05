@@ -1,11 +1,20 @@
 import { NavLink,useLocation } from "react-router-dom";
+import { getStore, getwish } from "../Jsfile/Local";
+import { useState , useEffect } from "react";
 
 const Navbar = () => {
 
   const location = useLocation();
 
  
+  const [cartCount, setCartCount] = useState(0);
+  const [wishlistCount, setWishlistCount] = useState(0)
 
+
+  useEffect(() => {
+    setCartCount(getStore().length); 
+    setWishlistCount(getwish().length); 
+  }, []);
 
   const navbar = () => {
     if (location.pathname.startsWith('/Statistics')) {
@@ -62,8 +71,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex items-center gap-2">
-          <button className="border rounded-full p-1 flex"><img src="https://img.icons8.com/?size=25&id=TmwMMf8vZgfS&format=png" alt="" /></button>
-         <button className="border rounded-full p-1"> <img src="https://img.icons8.com/?size=24&id=86721&format=png" alt="" /></button>
+          <button className="border rounded-full p-1 flex relative"><img src="https://img.icons8.com/?size=25&id=TmwMMf8vZgfS&format=png" alt="" />
+          <span className="absolute left-4 bottom-5 bg-gray-600 rounded-full p-1">{cartCount}</span>
+          </button>
+         <button className="border rounded-full p-1 relative"> <img src="https://img.icons8.com/?size=24&id=86721&format=png" alt="" />
+         <span className="absolute left-4 bottom-5 bg-gray-600 rounded-full p-1">{wishlistCount}</span></button>
         </div>
        </div>
       </div>

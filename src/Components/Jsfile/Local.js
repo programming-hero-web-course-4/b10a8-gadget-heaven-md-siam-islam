@@ -32,5 +32,11 @@ const addwish = (id) => {
     localStorage.setItem('wish-list', JSON.stringify(wishList));
 };
 
+ const clearStore = () => {
+    localStorage.clear(); 
+};
 
-export { addStore, addwish, getStore, getwish};
+
+
+
+export { addStore, addwish, getStore, getwish,clearStore};

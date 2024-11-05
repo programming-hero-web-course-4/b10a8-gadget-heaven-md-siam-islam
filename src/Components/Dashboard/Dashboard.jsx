@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 
 import { NavLink, Outlet } from "react-router-dom";
 
@@ -25,6 +25,15 @@ const Dashboard = () => {
         }
       }
 
+      useEffect(() => {
+        if (location.pathname === "/dashboard/cart") {
+            handleActive("card");
+        } else if (location.pathname === "/dashboard/Wishlist") {
+            handleActive("wishlist");
+        } else {
+            handleActive("card"); 
+        }
+    }, [location.pathname]);
     return (
         <div>
             <div className='bg-[#9538E2] px-5 py-4 rounded-3xl mt-10 flex justify-center items-center flex-col h-[300px] mb-20'>
@@ -45,7 +54,7 @@ const Dashboard = () => {
 
                 <NavLink  to="/dashboard/Wishlist">
                     {({ isActive }) => (
-                        <button onClick={() => handleActive("siam")}  className={`border-2 rounded-3xl px-8 py-2 font-semibold text-white ${isActive ? " bg-blue-400 text-black" : ""}`}>
+                        <button onClick={() => handleActive("cards")}  className={`border-2 rounded-3xl px-8 py-2 font-semibold text-white ${isActive ? " bg-blue-400 text-black" : ""}`}>
                            Wishlist
                         </button>
                     )}

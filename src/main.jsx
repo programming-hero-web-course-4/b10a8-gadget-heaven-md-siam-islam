@@ -13,6 +13,8 @@ import Statistics from './Components/Statistics/Statistics';
 import History from './Components/History/History';
 import Wishlist from './Components/Wishlist/Wishlist';
 import Addcart from './Components/Addcat/Addcart';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -93,5 +95,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
      <RouterProvider router={router} />
+     <ToastContainer />
   </StrictMode>,
 )

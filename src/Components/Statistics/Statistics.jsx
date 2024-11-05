@@ -2,6 +2,7 @@
 import { list } from "postcss";
 import { useLoaderData, useParams,useNavigate } from "react-router-dom";
 import { addStore, addwish } from "../Jsfile/Local";
+import { toast } from 'react-toastify';
 
 
 
@@ -16,12 +17,12 @@ const Statistics = () => {
 
 const handleAddtoCart = (id) => {
     addStore(id);
-    alert("Added to cart!");
+    toast.success("Added to cart!");
 };
 
 const handlewish = (id) => {
     addwish(id);
-    alert("Added to wishlist!");
+    toast.success("Added to wishlist!");
 };
     
 

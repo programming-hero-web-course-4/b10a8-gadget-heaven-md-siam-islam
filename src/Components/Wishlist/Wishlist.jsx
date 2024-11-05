@@ -18,7 +18,7 @@ const Wishlist = () => {
             
             {wish.length > 0 ? (
                 wish.map((item, index) => (
-                    <div key={index} className="flex gap-8 w-10/12 mx-auto my-7 bg-white shadow-xl rounded-2xl">
+                    <div key={index} className="flex gap-8 w-10/12 mx-auto my-7 bg-white shadow-xl rounded-2xl px-5 py-3">
                         <img src={item?.product_image} alt={item?.product_title} />
                         <div>
                             <h1 className="text-2xl mb-4">{item?.product_title}</h1>
