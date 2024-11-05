@@ -8,10 +8,13 @@ import {
 import Main from './Components/MainFile/Main';
 import Home from './Components/Home/Home';
 import Card2 from './Components/Cardsection/Card2';
-import ErrorPage from './Components/Error/Error';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Statistics from './Components/Statistics/Statistics';
 import History from './Components/History/History';
+import Wishlist from './Components/Wishlist/Wishlist';
+import Addcart from './Components/Addcat/Addcart';
+
+
 
 
 
@@ -26,9 +29,6 @@ const router = createBrowserRouter([
         path:"/",
         element:<Home></Home>,
         loader: () => fetch('../public/categories.json'),
-
-        errorElement:<ErrorPage></ErrorPage>,
-
         children:[
         
          {
@@ -53,7 +53,19 @@ const router = createBrowserRouter([
       },
       {
         path:"/dashboard",
-        element:<Dashboard></Dashboard>
+        element:<Dashboard></Dashboard>,
+        children: [
+          {
+            path:'/dashboard/Wishlist',
+            element:<Wishlist></Wishlist>,
+            loader: () => fetch('/Data.json'),
+          },
+          {
+            path:'/dashboard/cart',
+            element:<Addcart></Addcart>,
+            loader: () => fetch('/Data.json'),
+          },
+        ]
       },
       {
         
