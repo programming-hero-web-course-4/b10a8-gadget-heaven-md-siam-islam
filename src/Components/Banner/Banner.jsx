@@ -17,7 +17,7 @@ const Banner = () => {
 
 
             </div>
-            <div className="  text-center absolute right-36 top-80 border-2 border-white rounded-2xl"> 
+            <div className="  text-center absolute right-36 top-80 border-2 border-white rounded-2xl ml-32"> 
               <img src={img} alt="" className="md:w-[1050px] md:h-[550px] object-cover rounded-2xl m-5 " />
             </div>
         </div>

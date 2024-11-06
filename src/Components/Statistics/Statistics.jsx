@@ -4,6 +4,9 @@ import { useLoaderData, useParams,useNavigate } from "react-router-dom";
 import { addStore, addwish } from "../Jsfile/Local";
 import { toast } from 'react-toastify';
 
+import ReactStars from "react-rating-stars-component";
+import { render } from "react-dom";
+
 
 
 
@@ -12,6 +15,11 @@ const Statistics = () => {
     const navigate = useNavigate();
     const { productId } = useParams();
     const data = useLoaderData();
+
+
+    const ratingChanged = (newRating) => {
+        console.log(newRating);
+      };
 
  
 
@@ -67,7 +75,25 @@ const handlewish = (id) => {
                             }
                         </ul>
 
-                        <h1 className="text-black font-bold text-2xl my-6">Rating :</h1>
+                        <h1 className="text-black font-bold text-2xl mt-4">Rating :</h1>
+
+                        <div className="flex items-center gap-4 mb-4">
+                            <div>
+                            <ReactStars
+                                count={5}
+                                value={product.rating}
+                                size={24}
+                                activeColor="#ffd700"
+                                onChange={ratingChanged}
+                                isHalf={true}
+                                edit={false}
+                            />
+                            </div>
+
+                            <div>
+                                <h1 className="font-semibold">{product?.rating}</h1>
+                            </div>
+                        </div>
 
 
                         <div className="flex items-center gap-2">
