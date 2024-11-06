@@ -65,7 +65,7 @@ const Navbar = () => {
             <NavLink to="/"className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`}><li><a className="font-semibold">Home</a></li></NavLink>
             <NavLink to='/Statistics' className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl '}`} ><li><a className="font-semibold">Statistics</a></li></NavLink>
             <NavLink to="/dashboard" className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`} ><li><a className="font-semibold">Dashboard</a></li></NavLink>
-            <NavLink to="/History"  className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`}><li><a className="font-semibold">History</a></li></NavLink>
+            <NavLink to="/History"  className={({isActive}) => `${isActive? "bg-[#9538E2] text-white rounded-xl" : 'hover:bg-[#9538E2] rounded-xl'}`}><li><a className="font-semibold">Chart</a></li></NavLink>
             
             
           </ul>

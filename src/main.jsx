@@ -95,6 +95,7 @@ const router = createBrowserRouter([
       {
         path:"/History",
         element:<History></History>,
+        loader: () => fetch('/Data.json'),
       }
     ]
   },

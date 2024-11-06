@@ -10,9 +10,9 @@ const Card3 = ({ data }) => {
             
             <div className="card-body">
                 <h2 className="card-title">{data.product_title}</h2>
-                <p>Price : $ {data.price}</p>
+                <p className="font-bold">Price : $ {data.price}</p>
                 <div className="card-actions my-5">
-                    <NavLink to={`/Statistics/${data.product_id}`}><button className="btn  font-semibold rounded-3xl border-2 border-[#9538E2] text-[#9538E2]"> View Details</button></NavLink>
+                    <NavLink to={`/Statistics/${data.product_id}`}><button className="btn  font-semibold rounded-3xl border-2 border-[#9538E2] text-[#9538E2] hover:bg-[#9538E2] hover:text-white"> View Details</button></NavLink>
                 </div>
             </div>
         </div>

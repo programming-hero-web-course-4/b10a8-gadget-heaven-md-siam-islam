@@ -142,5 +142,53 @@
         "availability": false,
         "rating": 4.8,
         "buttonAction": "/Watches/WCH003"
+    },
+    {
+        "product_id": "KBD005",
+        "product_title": "HyperX Alloy FPS Pro",
+        "product_image": "https://i.ibb.co.com/H7W7qqH/images-4.jpg",
+        "category": "Keyboards",
+        "price": 110,
+        "description": "Compact, tenkeyless mechanical keyboard built for FPS gamers.",
+        "Specification": ["Cherry MX mechanical key switches", "Red LED backlighting", "Durable steel frame", "Portable and lightweight"],
+        "availability": true,
+        "rating": 4.6,
+        "buttonAction": "/Keyboards/KBD005"
+    },
+     {
+        "product_id": "KBD004",
+        "product_title": "SteelSeries Apex Pro",
+        "product_image": "https://i.ibb.co.com/KXKvq6C/download-12.jpg",
+        "category": "Keyboards",
+        "price": 250,
+        "description": "Premium mechanical keyboard with adjustable actuation switches.",
+        "Specification": ["OmniPoint adjustable switches", "RGB illumination", "Aircraft-grade aluminum frame", "USB passthrough"],
+        "availability": true,
+        "rating": 4.9,
+        "buttonAction": "/Keyboards/KBD004"
+    },
+    {
+        "product_id": "KBD003",
+        "product_title": "Razer BlackWidow V3",
+        "product_image": "https://i.ibb.co.com/WFtbPH5/download-13.jpg",
+        "category": "Keyboards",
+        "price": 120,
+        "description": "Mechanical gaming keyboard with Razer Green switches and RGB Chroma backlighting.",
+        "Specification": ["Razer Green switches", "RGB Chroma backlighting", "Media controls", "Ergonomic wrist rest"],
+        "availability": true,
+        "rating": 4.8,
+        "buttonAction": "/Keyboards/KBD003"
+    },
+    {
+        "product_id": "KBD002",
+        "product_title": "Logitech G Pro X",
+        "product_image": "https://i.ibb.co.com/yWTcpxC/images-5.jpg",
+        "category": "Keyboards",
+        "price": 130,
+        "description": "Customizable mechanical keyboard designed for esports professionals.",
+        "Specification": ["Hot-swappable switches", "RGB lighting", "Tenkeyless design", "Detachable cable"],
+        "availability": true,
+        "rating": 4.7,
+        "buttonAction": "/Keyboards/KBD002"
     }
 ]

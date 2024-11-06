@@ -13,6 +13,16 @@
       "id": 3,
       "category": "Watches",
       "slug": "watches"
+    },
+    {
+      "id": 3,
+      "category": "Keyboards",
+      "slug": "Keyboards"
+    },
+    {
+      "id": 3,
+      "category": "Hadphone",
+      "slug": "Hadphone"
     }
   ]
   
