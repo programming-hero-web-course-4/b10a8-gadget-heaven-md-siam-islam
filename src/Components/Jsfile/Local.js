@@ -37,6 +37,19 @@ const addwish = (id) => {
 };
 
 
+const updateStore = (updatedProductIds) => {
+    localStorage.setItem('cart-list', JSON.stringify(updatedProductIds));
+};
 
 
-export { addStore, addwish, getStore, getwish,clearStore};
+
+const updateWish = (updatedWishIds) => {
+    localStorage.setItem('wish-list', JSON.stringify(updatedWishIds));
+};
+
+
+
+
+
+
+export { addStore, addwish, getStore, getwish,clearStore,updateStore,updateWish};
