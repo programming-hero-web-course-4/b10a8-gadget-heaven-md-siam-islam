@@ -16,6 +16,7 @@ import Addcart from './Components/Addcat/Addcart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Error from './Components/Errorpage/Error';
+import Contact from './Components/Contact/Contact';
 
 
 
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
           element:<Card2></Card2>,
           loader: () => fetch('/Data.json')
          },
+         
          {
           path : "/card/:categories",
 
@@ -96,7 +98,11 @@ const router = createBrowserRouter([
         path:"/History",
         element:<History></History>,
         loader: () => fetch('/Data.json'),
-      }
+      },
+      {
+        path:'/contact',
+        element:<Contact></Contact>
+       },
     ]
   },
 ]);
