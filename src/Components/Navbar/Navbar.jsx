@@ -1,6 +1,5 @@
 import { NavLink,useLocation } from "react-router-dom";
-import { getStore, getwish } from "../Jsfile/Local";
-import { useState , useEffect } from "react";
+
 
 const Navbar = () => {
 
@@ -11,6 +10,9 @@ const Navbar = () => {
   const navbar = () => {
     if (location.pathname.startsWith('/Statistics')) {
       return { backgroundColor: 'white', color: 'black' };
+    }
+    else if(location.pathname.startsWith('/dashboard')){
+      return { backgroundColor:'white' , color : 'black'}
     }
   
     switch (location.pathname) {
@@ -63,10 +65,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex items-center gap-2">
-          <button className="border rounded-full p-1 flex relative"><img src="https://img.icons8.com/?size=25&id=TmwMMf8vZgfS&format=png" alt="" />
+          <button className="border rounded-full p-1 flex relative bg-white"><img src="https://img.icons8.com/?size=25&id=TmwMMf8vZgfS&format=png" alt="" />
           <span className="absolute left-4 bottom-6 "></span>
           </button>
-         <button className="border rounded-full p-1 relative"> <img src="https://img.icons8.com/?size=24&id=86721&format=png" alt="" />
+         <button className="border rounded-full p-1 relative bg-white"> <img src="https://img.icons8.com/?size=24&id=86721&format=png" alt="" />
          <span className="absolute left-4 bottom-6"></span></button>
         </div>
        </div>
