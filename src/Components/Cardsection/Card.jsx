@@ -8,7 +8,6 @@ const Card = ({ data }) => {
     return (
         <div className="my-24">
             <div className="flex flex-col border rounded-2xl px-3 pu-2">
-                {/* <NavLink to="/card"> */}
 
                 <NavLink to="/card">
                     
@@ -19,7 +18,6 @@ const Card = ({ data }) => {
                         </button>
                     
                 </NavLink>
-                {/* </NavLink> */}
                 {
                     data?.map((e, index) => (
                         <NavLink 
