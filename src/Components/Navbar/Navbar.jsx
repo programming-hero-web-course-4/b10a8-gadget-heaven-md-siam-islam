@@ -72,10 +72,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-end flex items-center gap-2">
           <button className="border rounded-full p-1 flex relative"><img src="https://img.icons8.com/?size=25&id=TmwMMf8vZgfS&format=png" alt="" />
-          <span className="absolute left-4 bottom-5 bg-gray-600 rounded-full p-1">{getStore.length}</span>
+          <span className="absolute left-4 bottom-6 ">{getStore.length}</span>
           </button>
          <button className="border rounded-full p-1 relative"> <img src="https://img.icons8.com/?size=24&id=86721&format=png" alt="" />
-         <span className="absolute left-4 bottom-5 bg-gray-600 rounded-full p-1">{getwish.length}</span></button>
+         <span className="absolute left-4 bottom-6">{getwish.length}</span></button>
         </div>
        </div>
       </div>

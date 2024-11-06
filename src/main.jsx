@@ -15,6 +15,7 @@ import Wishlist from './Components/Wishlist/Wishlist';
 import Addcart from './Components/Addcat/Addcart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Error from './Components/Errorpage/Error';
 
 
 
@@ -26,11 +27,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <Error></Error>,
     children:[
       {
         path:"/",
         element:<Home></Home>,
         loader: () => fetch('/categories.json'),
+       
         children:[
         
          {
